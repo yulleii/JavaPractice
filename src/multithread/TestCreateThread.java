@@ -1,8 +1,12 @@
 package multithread;
 
 
+import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.FutureTask;
+
 public class TestCreateThread {
-    public static void main(String[] args) {
+    public static void main (String[] args) throws ExecutionException,InterruptedException{
 //      for(int i=0;i<10;i++){
 //          new MyThread(i).start();
 //      }
@@ -23,9 +27,16 @@ public class TestCreateThread {
             }).start();
         }
         */
-        MyThread1 thread1=new MyThread1();
-            new Thread(thread1).start();
-            new Thread(thread1).start();
+//        MyThread1 thread1=new MyThread1();
+//            new Thread(thread1).start();
+//            new Thread(thread1).start();
+        MyCallable mc=new MyCallable();
+        FutureTask<Integer>ft=new FutureTask<>(mc);
+        Thread thread=new Thread(ft);
+        Thread thread1=new Thread(ft);
+        thread.start();
+        thread1.start();
+        System.out.println(ft.get());
 
     }
 }
@@ -64,6 +75,10 @@ class MyThread1 implements Runnable{
         }
     }
 }
-
+class MyCallable implements Callable<Integer> {
+    public Integer call(){
+        return 123;
+    }
+}
 
 
