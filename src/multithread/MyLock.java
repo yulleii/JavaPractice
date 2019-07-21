@@ -1,12 +1,16 @@
 package multithread;
 
 import java.util.concurrent.locks.AbstractQueuedSynchronizer;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 public class MyLock extends AbstractQueuedSynchronizer {
     protected MyLock() {
         super();
     }
-
+    public void test(){
+        ReentrantReadWriteLock rw=new ReentrantReadWriteLock();
+    }
     @Override
     //尝试获取锁
     protected boolean tryAcquire(int arg) {
