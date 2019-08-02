@@ -12,23 +12,24 @@ public class HeapSort<T extends Comparable<T>>extends Sort<T> {
             sink(nums,1,N);
         }
     }
-        private void sink(T[] nums, int k, int N) {
-            while (2 * k <= N) {
-                int j = 2 * k;
-                if (j < N && less(nums, j, j + 1))
-                    j++;
-                if (!less(nums, k, j))
-                    break;
-                swap(nums, k, j);
-                k = j;
-            }
+    private void sink(T[] nums, int k, int N) {
+        while (2 * k <= N) {
+            int j = 2 * k;
+            if (j < N && less(nums, j, j + 1))
+                j++;
+            if (!less(nums, k, j))
+                break;
+            swap(nums, k, j);
+            k = j;
         }
+    }
 
-        private boolean less(T[] nums, int i, int j) {
+    private boolean less(T[] nums, int i, int j) {
             return nums[i].compareTo(nums[j]) < 0;
         }
 
     public static void main(String[] args) {
         Integer[]i=new Integer[]{0,5,2,4,6};
+        new HeapSort<Integer>().sort(i);
     }
 }
