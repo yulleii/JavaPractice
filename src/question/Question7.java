@@ -15,8 +15,8 @@ public class Question7 {
         Question7 question7=new Question7();
         TreeNode treeNode=question7.reConstructBinaryTree(new int[]{1,2,4,7,3,5,6,8},new int[]{4,7,2,1,5,3,8,6});
         TreeNode.layerTranverse(treeNode);
-//        int[]array=question7.getPosArray(new int[]{1,2,4,7,3,5,6,8},new int[]{4,7,2,1,5,3,8,6});
-//        for(int a:array)
+//        int[]arrayqueuestack=question7.getPosArray(new int[]{1,2,4,7,3,5,6,8},new int[]{4,7,2,1,5,3,8,6});
+//        for(int a:arrayqueuestack)
 //            System.out.println(a);
     }
 
