@@ -105,7 +105,7 @@ public class AVLTree {
         return node;
     }
 
-    // A utility function to print preorder traversal
+    // A utility function to Print preorder traversal
     // of the tree.
     // The function also prints height of every node
     void preOrder(Node node) {

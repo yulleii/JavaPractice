@@ -7,8 +7,8 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
         // TwoSum();
-        //print(0,"这次从idea内部进行add push操作");
-//        print(1,"i want to update this file!");
+        //Print(0,"这次从idea内部进行add push操作");
+//        Print(1,"i want to update this file!");
         //testMap
 //        int []nums=testMap();
 //       for(int i=0;i<nums.length;i++){
