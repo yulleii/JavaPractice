@@ -119,6 +119,5 @@ public class Print {
         head.left.left.right = new Node(777);
         printPostOrderNoRecur(head);
         Queue<Integer> q=new LinkedList<>();
-        q.
     }
 }
