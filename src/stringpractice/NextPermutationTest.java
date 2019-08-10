@@ -10,7 +10,7 @@ public class NextPermutationTest {
             System.out.println(String.valueOf(c));
     }
 
-    public static boolean nextPermutation(char[]chars){
+    private static boolean nextPermutation(char[]chars){
         int len=chars.length;
         int i=len-2;
         while(i>=0 && chars[i]>chars[i+1])i--;
