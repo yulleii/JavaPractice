@@ -23,7 +23,7 @@ public class SmallSum {
     public static int mergeSort(int[]nums,int l,int r){
         if(l==r)
             return 0;
-        int mid=l+((r-l)>>1);
+        int mid=l+((r-l)/2);
         return mergeSort(nums,l,mid)+mergeSort(nums,mid+1,r)+mergeProcess(nums,l,mid,r);
     }
 
@@ -31,15 +31,18 @@ public class SmallSum {
         int p1=l;
         int p2=m+1;
         int sum=0;
-        for(int k=l;k<=m;k++)
+        for(int k=l;k<=r;k++)
             aux[k]=nums[k];
-        for(int k=l;k<=m;k++){
-            if(p1>m)nums[k]=aux[p2++];
-            else if(p2>r)nums[k]=aux[p1++];
-            else if(nums[p1]<nums[p2]){
+        for(int k=l;k<=r;k++){
+            if(p1>m)
+                nums[k]=aux[p2++];
+            else if (p2>r)
                 nums[k]=aux[p1++];
-                sum+=(r-p2+1)*nums[k];
+            else if(aux[p1]<aux[p2]){
+                nums[k]=aux[p1++];
+                //sum+=(r-p2+1);
             }else{
+                sum+=(m-p1+1);
                 nums[k]=aux[p2++];
             }
         }
@@ -60,6 +63,6 @@ public class SmallSum {
     }
 
     public static void main(String[] args) {
-        System.out.println(myMethod(new int[]{5,4,3,2,1}));
+        System.out.println(myMethod(new int[]{1,2,3,4,5,6,7,0}));
     }
 }
