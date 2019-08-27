@@ -14,7 +14,7 @@ public abstract class LogTestArray{
         return arr;
     }
 
-    // for test
+    // for Solution
     public static int[] copyArray(int[] arr) {
         if (arr == null) {
             return null;
@@ -26,7 +26,7 @@ public abstract class LogTestArray{
         return res;
     }
 
-    // for test
+    // for Solution
     public static boolean isEqual(int[] arr1, int[] arr2) {
         if ((arr1 == null && arr2 != null) || (arr1 != null && arr2 == null)) {
             return false;
@@ -49,7 +49,7 @@ public abstract class LogTestArray{
         arr[i]=arr[j];
         arr[j]=tmp;
     }
-    // for test
+    // for Solution
     public static void printArray(int[] arr) {
         if (arr == null) {
             return;

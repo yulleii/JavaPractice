@@ -108,5 +108,6 @@ public class SerializeAndReconstructTree {
         head.right.right = new Node(66);
         head.left.left.right = new Node(777);
         System.out.println(preOrder(head));
+        reconByPreString(preOrder(head));
     }
 }

@@ -12,7 +12,7 @@ public class HeapSort extends LogTestArray {
         for(int i=(N-1)/2;i>=0;i--){
             sink(nums,i,N);
         }
-        while(N>=0){
+        while(N>0){
             swap(nums,0,N--);
             sink(nums,0,N);
         }
@@ -40,6 +40,6 @@ public class HeapSort extends LogTestArray {
         Arrays.sort(nums);
     }
     public static void main(String[] args) {
-        new HeapSort().test(5000,50,100);
+        new HeapSort().test(5000,10,20);
     }
 }

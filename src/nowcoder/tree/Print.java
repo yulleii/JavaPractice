@@ -91,7 +91,7 @@ public class Print {
     public static void posOrderUnRecur2(Node h) {
         System.out.print("pos-order: ");
         if (h != null) {
-            Stack<Node> stack = new Stack<Node>();
+            Stack<Node> stack = new Stack<>();
             stack.push(h);
             Node c = null;
             while (!stack.isEmpty()) {

@@ -27,7 +27,7 @@ public class ThreeQuickSort extends LogTestArray {
     }
     public void quickSort(int[]nums,int l,int r){
         if(r<=l)return;
-        int m=(int)((r-l+1)*Math.random());
+        int m=(int)((r-l+1)*Math.random())+l;
         swap(nums,m,r);
         int[]p=partition(nums,l,r);
         quickSort(nums,l,p[0]-1);

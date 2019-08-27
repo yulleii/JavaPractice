@@ -14,7 +14,7 @@ public class MinPath {
         return Math.min(process1(matrix,i,j-1), process1(matrix,i-1,j))+res;
     }
 
-    // for test
+    // for Solution
     public static int[][] generateRandomMatrix(int rowSize, int colSize) {
         if (rowSize < 0 || colSize < 0) {
             return null;
